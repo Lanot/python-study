@@ -22,22 +22,22 @@ for x in range(n // 2):
     # Top line
     for i in range(x, n - 1 - x):
         val[x][i] = cnt
-        cnt = cnt + 1
+        cnt += 1
 
     # Right Line
     for i in range(x, n - 1 - x):
         val[i][n - 1 - x] = cnt
-        cnt = cnt + 1
+        cnt += 1
 
     # Bottom Line
     for i in range(x, n - 1 - x):
         val[n - 1 - x][n - 1 - i] = cnt
-        cnt = cnt + 1
+        cnt += 1
 
     # Left Line
     for i in range(x, n - 1 - x):
         val[n - 1 - i][x] = cnt
-        cnt = cnt + 1
+        cnt += 1
 
 # The most center element if it's odd number of N
 if n % 2 == 1:
